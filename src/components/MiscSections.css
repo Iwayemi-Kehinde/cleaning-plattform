@@ -1,0 +1,364 @@
+/* ==========================================================================
+   CEO Message / Mission Values Section
+   ========================================================================== */
+
+.ceo-section {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.ceo-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%),
+                    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+}
+
+.ceo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ceo-message {
+  padding-right: var(--space-8);
+}
+
+.ceo-message .section-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ceo-message h2 {
+  color: var(--color-white);
+  margin-bottom: var(--space-6);
+}
+
+.ceo-quote {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-6);
+  font-style: italic;
+  position: relative;
+  padding-left: var(--space-6);
+  border-left: 3px solid var(--color-secondary);
+}
+
+.ceo-message p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+}
+
+.ceo-signature {
+  margin-top: var(--space-6);
+}
+
+.ceo-signature strong {
+  display: block;
+  font-size: var(--text-lg);
+  color: var(--color-white);
+}
+
+.ceo-signature span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-sm);
+}
+
+/* Mission Values */
+.mission-values {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.mv-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: all var(--transition-base);
+}
+
+.mv-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(4px);
+}
+
+.mv-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.mv-card-icon {
+  font-size: 1.5rem;
+}
+
+.mv-card h3 {
+  color: var(--color-white);
+  font-size: var(--text-lg);
+}
+
+.mv-card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .ceo-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .ceo-message {
+    padding-right: 0;
+  }
+
+  .ceo-quote {
+    font-size: var(--text-base);
+  }
+}
+
+/* ==========================================================================
+   Industries & Areas We Serve
+   ========================================================================== */
+
+.industries {
+  background-color: var(--color-gray-50);
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.industry-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-gray-100);
+  transition: all var(--transition-base);
+}
+
+.industry-item:hover {
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.industry-icon {
+  font-size: 1.75rem;
+}
+
+.industry-item span:last-child {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-gray-800);
+}
+
+.areas-served {
+  margin-top: var(--space-8);
+  text-align: center;
+}
+
+.areas-served p {
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.area-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.area-tag {
+  display: inline-block;
+  padding: var(--space-1) var(--space-4);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Eco-Friendly Section
+   ========================================================================== */
+
+.eco-friendly {
+  background-color: var(--color-primary-lighter);
+}
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.eco-content h2 {
+  margin-bottom: var(--space-4);
+}
+
+.eco-content p {
+  color: var(--color-gray-600);
+  line-height: 1.8;
+  margin-bottom: var(--space-6);
+}
+
+.eco-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.eco-stat {
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-gray-100);
+}
+
+.eco-stat-value {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-accent-dark);
+}
+
+.eco-stat-label {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  margin-top: var(--space-1);
+}
+
+.eco-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eco-visual-inner {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  position: relative;
+}
+
+.eco-visual-ring {
+  position: absolute;
+  inset: -20px;
+  border: 2px dashed var(--color-primary);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .eco-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .eco-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .eco-visual-inner {
+    width: 200px;
+    height: 200px;
+    font-size: 4rem;
+  }
+}
+
+/* ==========================================================================
+   Certifications / Guarantees
+   ========================================================================== */
+
+.certifications {
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-gray-100);
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.cert-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-10);
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.cert-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.cert-text strong {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-gray-900);
+}
+
+.cert-text span {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+}
+
+@media (max-width: 640px) {
+  .cert-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+}

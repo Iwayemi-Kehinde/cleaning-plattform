@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Trust Badges / Statistics
+   ========================================================================== */
+
+.trust-badges {
+  padding: var(--space-12) 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.trust-badges::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 0% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+.trust-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-6);
+  position: relative;
+  z-index: 1;
+}
+
+.trust-badge-item {
+  text-align: center;
+  padding: var(--space-4);
+}
+
+.trust-badge-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.trust-badge-value {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.1;
+  margin-bottom: var(--space-1);
+}
+
+.trust-badge-label {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .trust-badges-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .trust-badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .trust-badge-value {
+    font-size: var(--text-2xl);
+  }
+}
