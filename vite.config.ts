@@ -12,7 +12,9 @@ export default defineConfig({
     tsConfigPaths({
       projects: ['./tsconfig.json'],
     }),
-    tanstackStart(),
+    tanstackStart({
+      spa: true, // Enable SPA mode for static site hosting
+    }),
     viteReact(),
   ],
 })
