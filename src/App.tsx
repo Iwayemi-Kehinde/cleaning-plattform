@@ -1,27 +1,22 @@
-import { createFileRoute } from '@tanstack/react-router'
-import Navbar from '~/components/Navbar'
-import Hero from '~/components/Hero'
-import TrustBadges from '~/components/TrustBadges'
-import About from '~/components/About'
-import Services from '~/components/Services'
-import WhyChooseUs from '~/components/WhyChooseUs'
-import Process from '~/components/Process'
-import Pricing from '~/components/Pricing'
-import Testimonials from '~/components/Testimonials'
-import FAQ from '~/components/FAQ'
-import MiscSections from '~/components/MiscSections'
-import { CTASection, ContactSection } from '~/components/CTAContact'
-import Footer from '~/components/Footer'
-
-export const Route = createFileRoute('/')({
-  component: Home,
-})
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import TrustBadges from './components/TrustBadges'
+import About from './components/About'
+import Services from './components/Services'
+import WhyChooseUs from './components/WhyChooseUs'
+import Process from './components/Process'
+import Pricing from './components/Pricing'
+import Testimonials from './components/Testimonials'
+import FAQ from './components/FAQ'
+import MiscSections from './components/MiscSections'
+import { CTASection, ContactSection } from './components/CTAContact'
+import Footer from './components/Footer'
 
 /**
- * Home page — SparkleClean Pro professional cleaning service landing page.
- * Composed of modular sections for maintainability and future backend integration.
+ * App — SparkleClean Pro professional cleaning service landing page.
+ * Composed of modular sections for maintainability.
  */
-function Home() {
+export default function App() {
   return (
     <>
       {/* Structured data for SEO (JSON-LD) */}

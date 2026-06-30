@@ -1,27 +1,24 @@
+# Dependencies
 node_modules
 
-!.env
+# Build output
+dist
+
+# Environment variables
 .env
 .env.local
+.env.*.local
+
+# Editor
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
 .DS_Store
-.cache
-.vercel
-.output
-.nitro
-.tanstack
+Thumbs.db
 
-/build/
-/api/
-/server/build
-/public/build
-/dist/
-/dist-ssr/
-
-# Sentry Config File
-.env.sentry-build-plugin
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-
-app.config.timestamp_*.js
+# Logs
+*.log
+npm-debug.log*

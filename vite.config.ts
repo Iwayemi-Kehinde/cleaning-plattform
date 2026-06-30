@@ -1,22 +1,13 @@
-import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import { defineConfig } from 'vite'
-import tsConfigPaths from 'vite-tsconfig-paths'
-import viteReact from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
   server: {
     port: 3000,
-    allowedHosts: true,
   },
-  plugins: [
-    tsConfigPaths({
-      projects: ['./tsconfig.json'],
-    }),
-    tanstackStart({
-      spa: {
-        enabled: true, // Enable SPA mode for static site hosting
-      },
-    }),
-    viteReact(),
-  ],
 })
